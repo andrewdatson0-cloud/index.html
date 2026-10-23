@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nikita 💗</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #8b315c;
+  text-align: center;
+  background: linear-gradient(135deg, #ffe0ee, #fff0f7, #f8d9ff);
+}
+
+.page {
+  min-height: 100vh;
+  padding: 35px 15px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+  color: #f04e91;
+  text-shadow: 2px 4px 0 #fff;
+  animation: bounce 2s infinite;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  margin: 15px auto;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.teddy-area {
+  position: relative;
+  margin: 20px auto;
+  width: min(90vw, 390px);
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teddy {
+  font-size: clamp(150px, 32vw, 230px);
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 12px 12px #d67ca855);
+  animation: hug 2.5s ease-in-out infinite;
+}
+
+.heart {
+  position: absolute;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 5;
+  animation: floatUp linear forwards;
+  filter: drop-shadow(0 2px 3px #ff8db566);
+}
+
+.card {
+  position: relative;
+  z-index: 6;
+  max-width: 650px;
+  margin: 15px auto 25px;
+  padding: 28px 22px;
+  background: #ffffffd9;
+  border: 3px solid white;
+  border-radius: 28px;
+  box-shadow: 0 12px 35px #dc72a333;
+}
+
+.card h2 {
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  color: #ef5798;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+button {
+  border: 0;
+  border-radius: 50px;
+  padding: 16px 27px;
+  margin: 10px 5px;
+  background: linear-gradient(135deg, #ff65a5, #e84991);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 7px 18px #e8499155;
+  transition: transform .2s;
+}
+
+button:hover {
+  transform: scale(1.06);
+}
+
+#surprise {
+  display: none;
+  animation: appear 1s ease;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(.6);
+    opacity: 0;
+  }
+  15% { opacity: 1; }
+  100% {
+    transform: translateY(-115vh) rotate(35deg) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes hug {
+  0%, 100% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(4deg) translateY(-14px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: scale(.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <h1>🎂 Happy Birthday! 🎂</h1>
+  <h1>Nikita 💗</h1>
+
+  <p class="subtitle">
+    To my sweetest sister, my happiness, my forever friend
+    and one of the most precious people in my life. 🌷
+  </p>
+
+  <div class="teddy-area">
+    <div class="teddy" aria-label="A cute teddy bear">🧸</div>
+  </div>
+
+  <div class="card">
+    <h2>For My Dearest Nikita 💕</h2>
+    <p>
+      Today is all about YOU, my beautiful sister! 🎀<br>
+      You make my world brighter just by being in it.<br>
+      Your smile is precious, your heart is beautiful,
+      and having you as my sister is one of my biggest blessings.
+      <br><br>
+      No matter how much we grow up, you will always have
+      a special place in my heart. I will always wish for your
+      happiness, your dreams to come true, and a life full of
+      love, laughter and beautiful memories. 🌸
+      <br><br>
+      <strong>I love you more than words can ever explain!</strong> 💗
+    </p>
+
+    <button id="startBtn" onclick="startBirthday()">
+      🎵 Open Your Birthday Surprise 🎁
+    </button>
+
+    <button onclick="showSurprise()">
+      💌 A Special Message
+    </button>
+
+    <div id="surprise">
+      <h2 style="margin-top:25px">A Big Teddy Hug for You! 🧸💖</h2>
+      <p>
+        If I could wrap all my love into a gift,
+        I would give it to you a million times.
+        Thank you for being my sister, Nikita.
+        You are irreplaceable, deeply loved, and forever special to me.
+        <br><br>
+        Happy Birthday, meri pyaari sister! 🥹💕
+        <br>
+        May your life always be as sweet as you are! 🎂🌷
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Made with all my love, just for you, Nikita 💗<br>
+    🎀 Lots of hugs, endless blessings and a million kisses! 🎀
+  </div>
+</div>
+
+<script>
+let audioContext;
+let musicTimer;
+let musicStarted = false;
+let noteIndex = 0;
+
+// A little synthesized birthday melody.
+// No external MP3 or music download is needed.
+const melody = [
+  [392, .35], [392, .35], [440, .7], [392, .7],
+  [523, .7], [494, 1.2],
+  [392, .35], [392, .35], [440, .7], [392, .7],
+  [587, .7], [523, 1.2],
+  [392, .35], [392, .35], [784, .7], [659, .7],
+  [523, .7], [494, .7], [440, 1.2],
+  [698, .35], [698, .35], [659, .7], [523, .7],
+  [587, .7], [523, 1.4]
+];
+
+function playNote(frequency, duration) {
+  if (!audioContext || audioContext.state !== "running") return;
+
+  const now = audioContext.currentTime;
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+
+  oscillator.type = "sine";
+  oscillator.frequency.setValueAtTime(frequency, now);
+
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(0.12, now + 0.03);
+  gain.gain.setValueAtTime(0.12, now + duration * 0.65);
+  gain.gain.exponentialRampToValueAtTime(
+    0.0001, now + duration * 0.95
+  );
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+
+  oscillator.start(now);
+  oscillator.stop(now + duration);
+}
+
+function playMelody() {
+  if (!musicStarted) return;
+
+  const [frequency, duration] = melody[noteIndex];
+  playNote(frequency, duration);
+
+  noteIndex = (noteIndex + 1) % melody.length;
+  musicTimer = setTimeout(playMelody, duration * 1000);
+}
+
+async function startBirthday() {
+  try {
+    if (!audioContext) {
+      audioContext = new (
+        window.AudioContext || window.webkitAudioContext
+      )();
+    }
+
+    await audioContext.resume();
+
+    if (!musicStarted) {
+      musicStarted = true;
+      playMelody();
+    }
+
+    document.getElementById("startBtn").textContent =
+      "🎶 Birthday Music Is Playing! 💗";
+
+    showSurprise();
+    burstHearts(35);
+  } catch (error) {
+    alert("Please tap the surprise button again to start the music!");
+  }
+}
+
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+  burstHearts(15);
+}
+
+function makeHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+
+  const hearts = ["💗", "💕", "💖", "💘", "💞", "🌸"];
+  heart.textContent = hearts[
+    Math.floor(Math.random() * hearts.length)
+  ];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (18 + Math.random() * 25) + "px";
+  heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 9500);
+}
+
+function burstHearts(count) {
+  for (let i = 0; i < count; i++) {
+    setTimeout(makeHeart, i * 90);
+  }
+}
+
+// Pink hearts float continuously across the page.
+setInterval(makeHeart, 350);
+</script>
+
+</body>
+</html>
